@@ -39,11 +39,11 @@ const h1Element = document.createElement("h1");
 h1Element.textContent = "DOM Manipulation";
 mainEl.appendChild(h1Element);
 h1Element.style.color = "red";
-mainEl.style.backgroundColor = "gray";
+mainEl.style.backgroundColor = "#3eeeee";
 
 // Step 2: Style the top menu
 const topMenuEl = document.querySelector("#top-menu");
-topMenuEl.style.backgroundColor = "#0e9aa7";
+topMenuEl.style.backgroundColor = "#0f9aa7";
 topMenuEl.classList.add("flex-around");
 
 //iterate over the entire menuLinks array and for each link create an <a> element that connects to the arrays buttons/hrefs
@@ -63,7 +63,7 @@ const subMenuEl = document.createElement("nav");
 subMenuEl.setAttribute("id", "sub-menu");
 subMenuEl.style.height = "";
 //how can I make the subMenu bar dissapear after 2 seconds?
-subMenuEl.style.backgroundColor = "var(--sub-menu-bg)";
+subMenuEl.style.backgroundColor = "violet";//"var(--sub-menu-bg)";
 subMenuEl.classList.add("flex-around");
 document.querySelector("header").appendChild(subMenuEl);
 
@@ -116,8 +116,12 @@ function buildSubmenu(linkContent) {
       subMenuEl.appendChild(anchorTag);
     });
   }
-  // Hide the submenu after 2 seconds
+  /////////HIDE THE SUBMENU AFTER 5 SECONDS//////////
   setTimeout(() => {
     subMenuEl.style.height = "0";
   }, 5000);
 }
+  ////////////////////////////////////////////////////////////////////
+ //////////////////////////////THE END///////////////////////////////
+////////////////////////////////////////////////////////////////////
+
