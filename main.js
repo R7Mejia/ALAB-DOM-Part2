@@ -53,7 +53,7 @@ menuLinks.forEach(function (link) {
   anchorTag.textContent = link.text;
   anchorTag.href = link.href;
   anchorTag.style.color = "yellow"; //Just added color. Mamma mia, ragazzi è una cosa bellissima!
-  anchorTag.classList.add("top-link"); //
+  anchorTag.classList.add("top-link"); 
   //the anchorTag element will be displayed as a child of the topMenu element
   topMenuEl.appendChild(anchorTag);
 });
@@ -62,15 +62,14 @@ menuLinks.forEach(function (link) {
 const subMenuEl = document.createElement("nav");
 subMenuEl.setAttribute("id", "sub-menu");
 subMenuEl.style.height = "";
-//how can I make the subMenu bar dissapear after 2 seconds?
-subMenuEl.style.backgroundColor = "violet";//"var(--sub-menu-bg)";
+subMenuEl.style.backgroundColor = "violet";
 subMenuEl.classList.add("flex-around");
 document.querySelector("header").appendChild(subMenuEl);
 
 // Step 4:
 const topMenuLinks = document.querySelectorAll(".top-link");
 topMenuEl.addEventListener("click", mouseClick);
-// Showthe submenu.
+// Show the submenu.
 
 function mouseClick(evt) {
   evt.preventDefault();
